@@ -19,7 +19,6 @@ export default function AddBlog({ onSubmit }) {
         if (post.title === '') return
         const newPost = {
             ...post,
-            id: Date.now()
         }
         setPost(initialPost)
         f(newPost);
