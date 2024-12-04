@@ -11,8 +11,6 @@ export default function AddBlog({ onSubmit }) {
     }
 
     const [post, setPost] = useState(initialPost)
-    const [rendering, setRendering] = useState(1)
-
 
     function articleSubmit(e, f) {
         e.preventDefault();
@@ -52,12 +50,6 @@ export default function AddBlog({ onSubmit }) {
         });
     }
 
-    // useEffect(() => {
-    //     rendering ? setRendering(0) :
-    //         alert(`Stai creando un post ${post.published ? 'publico' : 'privato'}`)
-    // }, [post.published])
-
-
     return (
         <div className='container'>
             <form className='form' onSubmit={(event) => articleSubmit(event, onSubmit)}>
@@ -89,13 +81,15 @@ export default function AddBlog({ onSubmit }) {
                             <label htmlFor="php">php</label>
                         </div>
                     </div>
-                    <div>
-                        <input type="radio" id="published-true" name="published" value={true} checked={post.published} onChange={(e) => onChange(e)} />
-                        <label htmlFor="published-true">Pubblico</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="published-false" name="published" value={false} checked={!post.published} onChange={(e) => onChange(e)} />
-                        <label htmlFor="published-false">Privato</label>
+                    <div className={style.published}>
+                        <div>
+                            <input type="radio" id="published-true" name="published" value={true} checked={post.published} onChange={(e) => onChange(e)} />
+                            <label htmlFor="published-true">Pubblico</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="published-false" name="published" value={false} checked={!post.published} onChange={(e) => onChange(e)} />
+                            <label htmlFor="published-false">Privato</label>
+                        </div>
                     </div>
                     <button type='submit'>Aggiungi</button>
                 </div>

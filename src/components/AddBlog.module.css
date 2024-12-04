@@ -3,12 +3,24 @@
     min-height: 100px;
 }
 
-.tags {
+.tags,
+.published {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
     align-items: center;
+
+    * {
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+        align-items: center;
+    }
+
+    *:hover {
+        cursor: pointer;
+    }
 }
 
 .dFlex {

@@ -1,0 +1,38 @@
+.allPages {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 50px;
+
+    .tag,
+    .firstPage,
+    .lastPage {
+        background-color: rgb(34, 34, 34);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 8px;
+    }
+
+    .tag:hover,
+    .firstPage:hover,
+    .lastPage:hover {
+        cursor: pointer;
+        background-color: rgb(163, 160, 160);
+        color: black;
+    }
+
+    .active {
+        background-color: rgb(35, 214, 220);
+        color: black;
+        padding: 5px 10px;
+        border-radius: 8px;
+    }
+
+    .active:hover {
+        cursor: default;
+    }
+
+
+}

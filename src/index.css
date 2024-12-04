@@ -20,6 +20,13 @@ img {
 
 button {
   border: 0px;
+  cursor: pointer;
+}
+
+select,
+input[type*="checkbox"],
+input[type*="radio"] {
+  cursor: pointer;
 }
 
 .container {
@@ -62,4 +69,28 @@ header {
     background-color: red;
     color: black;
   }
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 -8px;
+  row-gap: 16px;
+}
+
+.row.blog {
+  margin-bottom: 50px;
+}
+
+[class^=col] {
+  padding: 0 8px;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.dNone {
+  display: none;
 }
