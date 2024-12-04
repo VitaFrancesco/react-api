@@ -36,7 +36,6 @@ export default function AddBlog({ onSubmit }) {
             value = elem.value;
         }
 
-        console.log([e.target, e.target.type, e.target.checked]);
         setPost({
             ...post,
             [elem.name]: value
@@ -53,10 +52,10 @@ export default function AddBlog({ onSubmit }) {
         });
     }
 
-    useEffect(() => {
-        rendering ? setRendering(0) :
-            alert(`Stai creando un post ${post.published ? 'publico' : 'privato'}`)
-    }, [post.published])
+    // useEffect(() => {
+    //     rendering ? setRendering(0) :
+    //         alert(`Stai creando un post ${post.published ? 'publico' : 'privato'}`)
+    // }, [post.published])
 
 
     return (

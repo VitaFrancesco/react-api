@@ -50,3 +50,16 @@ header {
   flex-wrap: wrap;
   gap: 15px;
 }
+
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 90px;
+
+  p {
+    background-color: red;
+    color: black;
+  }
+}
