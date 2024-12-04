@@ -1,0 +1,11 @@
+.container {
+    max-width: 1024px;
+    margin: auto;
+}
+
+footer {
+    background-color: rgb(44, 41, 41);
+    color: white;
+    text-align: center;
+    padding: 28px 0;
+}
